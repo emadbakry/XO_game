@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO game by Emad_code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="tit">
+            <h1>
+                XO Game by Emad_Code
+            </h1>
+        </div>
+        <div class="img"></div>
+    </header>
+    <section class="game">
+        <div class="btns">
+            <div class="reset"><button class="btn reset_btn" type="button">Reset</button></div>
+        </div>
+        <div class="field">
+            <div><button type="button"data-number="1"></button></div>
+            <div><button type="button"data-number="2"></button></div>
+            <div><button type="button"data-number="3"></button></div>
+            <div><button type="button"data-number="4"></button></div>
+            <div><button type="button"data-number="5"></button></div>
+            <div><button type="button"data-number="6"></button></div>
+            <div><button type="button"data-number="7"></button></div>
+            <div><button type="button"data-number="8"></button></div>
+            <div><button type="button"data-number="9"></button></div>
+        </div>
+    </section>
+    <div class="winning_text">
+        <span class="winner_name">O</span>
+        <span>Won the Game</span>
+        <p>
+            Congrats!
+        </p>
+        <img src="./assets/icon_party.gif" alt="congrats">
+        <button onclick="restart();" type="button" class="btn second_btn">Restart the game</button>
+    </div>
+    <div class="me">
+        <h3>Emad Code</h3>
+        <div class="div"><span>At</span><a href="https://twitter.com/Emad_code">Twitter</a></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
