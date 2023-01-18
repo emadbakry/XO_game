@@ -28,11 +28,16 @@ if (
     toggle_ai_btn.click();
 }
 
+let change_turn = () => {
+      if (my_turn) {
+        my_turn = false;
+      } else {
+        my_turn = true;
+      }
+}
 let ALL_disabled;
 function check_tie() {
-    console.log('tie run')
     if (ALL_disabled.length == 0 && game_running) {
-        console.log('tie run inside')
       congrats.textContent = "Try again!";
       document.querySelector(".cong_img").style.display = "none";
       document.querySelector(".winner_name").textContent = "Tie";
@@ -49,7 +54,7 @@ function won_x() {
     document.querySelector(".winner_name").textContent = 'X won the';
     document.querySelector(".winning_text").classList.add("active");
 }
-let my_turn = false;
+let my_turn = true;
 let check_field = () => {
   let o_clicked = document.querySelectorAll(".field .disabled.o");
   let x_clicked = document.querySelectorAll(".field .disabled.x");
@@ -103,11 +108,7 @@ let All_arr = [x_array,o_array];
         }
     }
     // run Ai
-    if (my_turn) {
-        my_turn = false;
-    } else {
-        my_turn = true;
-    }
+    change_turn();
     if (player == "AI" && my_turn && game_running && ALL_disabled.length!=0) {
         document.body.classList.add('no_touch');
         setTimeout(() => {
@@ -144,6 +145,7 @@ reset_btn.addEventListener("click", () => reset_btn_func());
     
 function reset_btn_func() {
     game_running = true;
+    my_turn = false;
     congrats.textContent = 'Congrats';
     document.querySelector(".cong_img").style.display = 'inline-block';
     btns.forEach(e => {

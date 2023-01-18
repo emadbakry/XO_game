@@ -27,9 +27,9 @@ header h1 {
 }
 /* toggle btn */
 .player_btn {
-    width: 60px;
+    width: 70px;
     height: 30px;
-    border: 1px solid red;
+    border: 1px solid #332;
     border-radius: 100px;
     display: flex;
     margin: auto;
@@ -49,21 +49,23 @@ header h1 {
 .player_btn:before {
     content: "AI";
     right: auto;
-    left: -35px;
+    left: -40px;
 }
 
 .toggle_btn {
     position: absolute;
     height: 30px;
-    width: 30px;
+    width: 45px;
     left: 0px;
     transition: 0.2s;
 }
 .f_mode_active .toggle_btn {
-    left: 30px;
+    left: 25px;
 }
+
 .player h3 {
-    margin: 5px;
+    margin: 0px;
+    margin-right: 3rem;
     font-size: 20px;
 }
 /* .toggle_btn:after {
@@ -144,6 +146,13 @@ button.disabled, .finished button {
 @media only screen and (min-width:700px) {
     .field {
         gap: 20px;
+    }
+    .player {
+    display: flex;
+    direction: ltr;
+    }
+    .player_btn {
+        margin: unset;
     }
 }
 
