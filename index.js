@@ -54,7 +54,7 @@ function won_x() {
     document.querySelector(".winner_name").textContent = 'X won the';
     document.querySelector(".winning_text").classList.add("active");
 }
-let my_turn = true;
+let my_turn = false;
 let check_field = () => {
   let o_clicked = document.querySelectorAll(".field .disabled.o");
   let x_clicked = document.querySelectorAll(".field .disabled.x");

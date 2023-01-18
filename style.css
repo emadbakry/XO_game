@@ -20,6 +20,10 @@ header h1 {
     color: #fff;
     transition: 0.3ms;
 }
+.reset_btn {
+    padding: 7px 15px;
+    box-sizing: border-box;
+}
 .btn:hover {
     color: #454ade;
     background: #fff;
@@ -32,25 +36,11 @@ header h1 {
     border: 1px solid #332;
     border-radius: 100px;
     display: flex;
-    margin: auto;
+    margin: auto 10px;
     justify-content: center;
     position: relative;
     cursor: pointer;
 }
-
-.player_btn .before,
-.player_btn .after {
-    /* content: "Friend"; */
-    top: -5px;
-    right: -75px;
-    font-size: 25px;
-    position: absolute;
-}
-.player_btn .before {
-    /* content: "AI"; */
-    right: auto;
-    left: -40px;
-} 
 
 .toggle_btn {
     position: absolute;
@@ -67,6 +57,14 @@ header h1 {
     margin: 0px;
     margin-right: 3rem;
     font-size: 20px;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+}
+.cont span {
+    display: block;
+    font-size: 25px;
 }
 /* .toggle_btn:after {
     display: flex;
@@ -151,8 +149,13 @@ button.disabled, .finished button {
     display: flex;
     direction: ltr;
     }
-    .player_btn {
+    .cont {
         margin: unset;
+    }
+    .player h3 {
+    margin: 0px;
+    margin-right: 1rem;
+    font-size: 24px;
     }
 }
 
