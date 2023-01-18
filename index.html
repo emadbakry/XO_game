@@ -19,6 +19,12 @@
     <section class="game">
         <div class="btns">
             <div class="reset"><button class="btn reset_btn" type="button">Reset</button></div>
+            <div class="player">
+                <h3>Play with:</h3>
+                <div class="player_btn">
+                    <button type="button" class="btn toggle_btn">AI</button>
+                </div>
+            </div>
         </div>
         <div class="field">
             <div><button type="button"data-number="1"></button></div>
@@ -33,12 +39,12 @@
         </div>
     </section>
     <div class="winning_text">
-        <span class="winner_name">O</span>
-        <span>Won the Game</span>
-        <p>
+        <span class="winner_name">O Won the</span>
+        <span>Game</span>
+        <p class="congrats">
             Congrats!
         </p>
-        <img src="./assets/icon_party.gif" alt="congrats">
+        <img class="cong_img" src="./assets/icon_party.gif" alt="congrats">
         <button onclick="restart();" type="button" class="btn second_btn">Restart the game</button>
     </div>
     <div class="me">

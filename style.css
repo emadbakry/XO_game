@@ -25,6 +25,54 @@ header h1 {
     background: #fff;
     outline: 1px solid #333;
 }
+/* toggle btn */
+.player_btn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 100px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.player_btn:before,
+.player_btn:after {
+    content: "Friend";
+    top: -5px;
+    right: -75px;
+    font-size: 25px;
+    position: absolute;
+}
+.player_btn:before {
+    content: "AI";
+    right: auto;
+    left: -35px;
+}
+
+.toggle_btn {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 0px;
+    transition: 0.2s;
+}
+.f_mode_active .toggle_btn {
+    left: 30px;
+}
+.player h3 {
+    margin: 5px;
+    font-size: 20px;
+}
+/* .toggle_btn:after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "AI";
+} */
+/* toggle btn */
 .game {
     margin: auto;
     width: 70vw;
@@ -74,6 +122,7 @@ button.disabled, .finished button {
     content: "\f00d";
     font-family: fontawesome;
     font-size: 65px;
+    transition: 0.3s;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -88,6 +137,9 @@ button.disabled, .finished button {
     content: "\f00d";
     opacity: 1;
 }
+.no_touch .field {
+    pointer-events: none;
+}
 
 @media only screen and (min-width:700px) {
     .field {
@@ -97,6 +149,7 @@ button.disabled, .finished button {
 
 
 .second_btn {
+    padding: 8px 15px;
     display: block;
     margin:15px auto;
     border-radius: 4px;
@@ -136,7 +189,7 @@ button.disabled, .finished button {
 }
 .winning_text span {
     font-weight: 500;
-    font-size: 28px;
+    font-size: 40px;
 }
 .winning_text p {
     font-size: 24px;
