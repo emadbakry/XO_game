@@ -6,21 +6,25 @@ let congrats = document.querySelector(".congrats");
 
 let player = 'AI';
 let game_running = true;
-function change_player() {
-    this.classList.toggle('f_mode_active');
+function change_player(e) {
+    
+    e.classList.toggle('f_mode_active');
     if (player == "AI") {
       player = "F";
-      this.querySelector(".toggle_btn").textContent = "F";
+      e.querySelector(".toggle_btn").textContent = "F";
     } else {
       player = "AI";
-      this.querySelector(".toggle_btn").textContent = "AI";
+      e.querySelector(".toggle_btn").textContent = "AI";
     }
     restart();
     window.sessionStorage.setItem('player', player);
 } 
 
 let toggle_ai_btn = document.querySelector(".player_btn");
-toggle_ai_btn.addEventListener('click', change_player);
+toggle_ai_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    change_player(e);
+} );
 if (
   window.sessionStorage.getItem("player") &&
   window.sessionStorage.getItem("player") != player
